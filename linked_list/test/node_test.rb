@@ -33,13 +33,38 @@ class NodeTest < Minitest::Test
 
   def test_linked_list_contents
     list = LinkedList.new
-    node = Node.new("")
-LinkedList head = <Node data="doop" next_node=nil>
- list.head = < node.data list.next_node >
-    assert_equal 
+    list2 = LinkedList.new
     assert_equal "doop", list.data
-    assert_equal nil, list.next_node
+    assert_nil list.next_node
   end
 
+  def test_is_next_node_nil
+    list = LinkedList.new
+    assert_nil list.next_node
+  end
+
+  def test_count_the_list
+    list = LinkedList.new
+    assert_equal 1, list.count
+  end
+
+  def test_change_list_to_string
+    list = LinkedList.new
+    assert_equal "doop", list.to_string
+  end
+
+  def test_append_deep
+    list = LinkedList.new
+    assert_equal "deep", list.append("deep")
+  end
+
+  def test_
 
 end
+
+# > list.head.next_node
+# => <Node data="deep" next_node=nil #5678904567890>
+# > list.count
+# => 2
+# > list.to_string
+# => "doop deep"
